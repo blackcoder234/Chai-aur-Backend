@@ -1,14 +1,21 @@
 {
   "name": "chai-aur-backend",
   "version": "1.0.0",
-  "description":"This A backend Practice Project",
+  "description": "This A backend Practice Project",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon  src/server.js"
   },
-  "keywords": ["Javascript","backend","Coffee"],
+  "keywords": [
+    "Javascript",
+    "backend",
+    "Coffee"
+  ],
   "author": "Amarnath Bera",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.4.2"
+  }
 }
