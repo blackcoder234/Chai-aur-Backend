@@ -7,6 +7,18 @@ dotenv.config({
 
 import 'dotenv/config' // this is modern approach and there should not be any issue for this updated node.js
 import connectDB from "./db/database.js";
-
-
+import { app } from './app.js';
+const port = process.env.PORT
 connectDB()
+
+.then(()=>{
+    app.listen(port, ()=>{
+        console.log(`Server is running on port: ${port}`);
+        console.log(`Visit this link.... http://localhost:${port}`)
+        
+    })
+})
+.catch((error)=>{
+    console.log("MongoDB Connection Error :", error);
+    
+})
