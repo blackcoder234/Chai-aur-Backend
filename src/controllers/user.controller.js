@@ -56,24 +56,19 @@ const registerUser = asyncHandler(async (req, res) => {
         password
 
     })
-    console.log("\nUser Details->", user);
-    
+    // for debugging
+    // console.log("\nUser Details->", user);
+
     const createdUser = await User.findById(user._id).select(
         "-password -refreshToken"
     )
-    console.log(createdUser);
-    
-
     if (!createdUser) {
         throw new ApiError(500, "Internal server error: registering the user")
 
     }
-
     return res.status(201).json(
         new ApiResponse(200, createdUser, "User successfully Registered")
     )
-
-
 })
 
 // export default registerUser
