@@ -147,3 +147,4 @@ dist
 #custom files
 .drawio
 .vscode
+public/temp
